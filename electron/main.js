@@ -10,13 +10,13 @@ function createWindow () {
   mainWindow = new BrowserWindow({width: 800, height: 600})
 
   // and load the index.html of the app.
-  mainWindow.loadFile('src/index.html')
+  mainWindow.loadFile('www/index.html')
 
   // Open the DevTools.
   //mainWindow.webContents.openDevTools()
 
   //hide main mane
-  mainWindow.setMenuBarVisibility(false);
+  //mainWindow.setMenuBarVisibility(false);
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {

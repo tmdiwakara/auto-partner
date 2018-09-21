@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <title>Ionic App</title>
@@ -16,7 +17,6 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
   <!-- cordova.js required for cordova apps (remove if not needed) -->
-  <script src="cordova.js"></script>
 
   <!-- un-comment this code to enable service worker
   <script>
@@ -27,9 +27,29 @@
     }
   </script>-->
 
+  <script>
+    var mysql = require('mysql');
+    var connection = mysql.createConnection({
+      host: 'localhost',
+      port: '3306',
+      user: 'root',
+      password: 'password',
+      database: 'auto_partner'
+    });
+
+    connection.connect();
+
+    connection.query('SELECT make FROM vehicles', function (error, results, fields) {
+      if (error) throw error;
+      console.log('The solution is: ', results);
+    });
+
+    connection.end();
+  </script>
   <link href="build/main.css" rel="stylesheet">
 
 </head>
+
 <body>
 
   <!-- Ionic's root component and where the app will load -->
@@ -46,4 +66,5 @@
   <script src="build/main.js"></script>
 
 </body>
+
 </html>

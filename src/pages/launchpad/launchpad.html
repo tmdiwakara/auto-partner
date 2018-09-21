@@ -1,0 +1,27 @@
+<!--
+  Generated template for the LaunchpadPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Launchpad</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding [fullscreen]="full">
+  <ion-grid>
+    <ion-row >
+      <ion-col col-lg-6><button ion-button block (click)="navToVehicles()">Vehicles</button></ion-col>
+      <ion-col col-lg-6><button ion-button block (click)="navToAccounts()">Accounts</button></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-lg-6><button ion-button block (click)="navToReports()">Reports</button></ion-col>
+      <ion-col col-lg-6><button ion-button block>Settings</button></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
